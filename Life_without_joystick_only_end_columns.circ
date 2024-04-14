@@ -430,6 +430,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Column 18"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
+    <comp lib="0" loc="(160,2010)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="Column 22"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
     <comp lib="0" loc="(160,410)" name="Tunnel">
       <a name="width" val="32"/>
       <a name="label" val="Column 2"/>
@@ -505,11 +510,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(160,2570)" name="Tunnel">
       <a name="width" val="32"/>
       <a name="label" val="Column 29"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(160,2000)" name="Tunnel">
-      <a name="width" val="32"/>
-      <a name="label" val="Column 22"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(160,1370)" name="Pin">
@@ -17352,11 +17352,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="31"/>
       <a name="label" val="left_up_out_30"/>
     </comp>
-    <comp lib="0" loc="(4070,5650)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="32"/>
-      <a name="label" val="Column_22"/>
-    </comp>
     <comp lib="0" loc="(1730,120)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="width" val="32"/>
@@ -20339,6 +20334,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="fanout" val="31"/>
       <a name="incoming" val="31"/>
       <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(4070,5650)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Column_22"/>
     </comp>
     <comp lib="0" loc="(1670,7170)" name="Tunnel">
       <a name="width" val="32"/>
