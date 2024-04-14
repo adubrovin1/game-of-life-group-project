@@ -1148,6 +1148,7 @@
     <a name="circuit" val="L_32x32_cells_e76a887e"/>
     <a name="clabel" val=" "/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="simulationFrequency" val="2048000.0"/>
     <appear>
       <rect fill="none" height="701" stroke="#000000" stroke-width="2" width="349" x="61" y="20"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="22" text-anchor="middle" x="358" y="176">Selecting</text>
@@ -1157,7 +1158,7 @@
       <text dominant-baseline="central" font-family="SansSerif" font-size="14" text-anchor="middle" x="73" y="66">0</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="22" text-anchor="middle" x="144" y="349">Columns input</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="14" text-anchor="middle" x="80" y="40">0</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="14" text-anchor="middle" x="363" y="36">31</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" text-anchor="middle" x="390" y="36">31</text>
       <circ-anchor facing="east" x="230" y="340"/>
       <circ-port dir="in" pin="1030,120" x="60" y="220"/>
       <circ-port dir="in" pin="1130,120" x="60" y="240"/>
