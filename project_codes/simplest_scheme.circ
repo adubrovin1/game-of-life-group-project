@@ -15,15 +15,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="jar#D:\prg\cdm16\jar\logisim-banked-memory-0.2.0.jar#org.cdm.logisim.memory.Components" name="7">
+  <lib desc="jar#D:\prg\cloned\game-of-life-group-project\jar\logisim-banked-memory-0.2.0.jar#org.cdm.logisim.memory.Components" name="7">
     <tool name="ROM">
       <a name="contents">addr/data: 8 8
 0
 </a>
     </tool>
   </lib>
-  <lib desc="jar#D:\prg\cdm16\jar\logisim-cdm-emulator-0.2.0.jar#org.cdm.logisim.emulator.Components" name="8"/>
-  <lib desc="jar#D:\prg\cdm16\jar\logisim-debugger-0.2.0.jar#org.cdm.logisim.debugger.Components" name="9"/>
+  <lib desc="jar#D:\prg\cloned\game-of-life-group-project\jar\logisim-cdm-emulator-0.2.0.jar#org.cdm.logisim.emulator.Components" name="8"/>
+  <lib desc="jar#D:\prg\cloned\game-of-life-group-project\jar\logisim-debugger-0.2.0.jar#org.cdm.logisim.debugger.Components" name="9"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -82,82 +82,87 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(640,570)" to="(660,570)"/>
     <wire from="(540,520)" to="(630,520)"/>
     <wire from="(540,500)" to="(630,500)"/>
+    <wire from="(450,400)" to="(450,440)"/>
     <wire from="(540,480)" to="(610,480)"/>
     <wire from="(640,550)" to="(710,550)"/>
     <wire from="(540,490)" to="(620,490)"/>
     <wire from="(620,480)" to="(630,480)"/>
-    <comp lib="0" loc="(490,370)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10unsigned"/>
-    </comp>
-    <comp lib="0" loc="(900,530)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="rd"/>
-    </comp>
-    <comp lib="0" loc="(660,570)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="data"/>
-    </comp>
-    <comp lib="0" loc="(430,370)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10unsigned"/>
-    </comp>
-    <comp lib="0" loc="(630,460)" name="Tunnel">
-      <a name="label" val="mem"/>
-    </comp>
-    <comp lib="7" loc="(950,490)" name="RAM">
-      <a name="addrWidth" val="16"/>
-      <a name="Directory" val="D:\prg\cdm16\project_codes\build\out.img"/>
-    </comp>
-    <comp lib="9" loc="(400,760)" name="Debugger"/>
-    <comp lib="0" loc="(630,520)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="addr"/>
-    </comp>
-    <comp lib="8" loc="(420,440)" name="CdM-16"/>
-    <comp lib="0" loc="(630,480)" name="Tunnel">
-      <a name="label" val="rd"/>
-    </comp>
-    <comp lib="1" loc="(600,580)" name="Controlled Buffer">
-      <a name="facing" val="west"/>
-      <a name="width" val="16"/>
-      <a name="control" val="left"/>
-    </comp>
     <comp lib="0" loc="(710,570)" name="Tunnel">
       <a name="label" val="rd"/>
+    </comp>
+    <comp lib="1" loc="(610,550)" name="NOT Gate">
+      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(860,550)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="mem"/>
     </comp>
+    <comp lib="0" loc="(630,520)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="addr"/>
+    </comp>
     <comp lib="0" loc="(440,560)" name="Clock">
       <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(660,570)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="data"/>
+    </comp>
+    <comp lib="1" loc="(620,570)" name="Controlled Buffer">
+      <a name="width" val="16"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="9" loc="(400,760)" name="Debugger"/>
+    <comp lib="0" loc="(880,530)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="7" loc="(950,490)" name="RAM">
+      <a name="addrWidth" val="16"/>
+      <a name="Directory" val="D:\prg\cloned\game-of-life-group-project\project_codes\build\out.img"/>
+    </comp>
+    <comp lib="0" loc="(430,370)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(630,500)" name="Tunnel">
+      <a name="label" val="word"/>
     </comp>
     <comp lib="0" loc="(810,490)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="16"/>
       <a name="label" val="addr"/>
     </comp>
-    <comp lib="1" loc="(620,570)" name="Controlled Buffer">
+    <comp lib="8" loc="(420,440)" name="CdM-16"/>
+    <comp lib="0" loc="(450,400)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="1" loc="(600,580)" name="Controlled Buffer">
+      <a name="facing" val="west"/>
       <a name="width" val="16"/>
       <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(630,500)" name="Tunnel">
-      <a name="label" val="word"/>
     </comp>
     <comp lib="0" loc="(840,530)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="word"/>
     </comp>
-    <comp lib="0" loc="(880,530)" name="Clock">
+    <comp lib="0" loc="(490,370)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(630,460)" name="Tunnel">
+      <a name="label" val="mem"/>
+    </comp>
+    <comp lib="0" loc="(900,530)" name="Tunnel">
       <a name="facing" val="north"/>
+      <a name="label" val="rd"/>
     </comp>
     <comp lib="0" loc="(950,490)" name="Tunnel">
       <a name="width" val="16"/>
       <a name="label" val="data"/>
     </comp>
-    <comp lib="1" loc="(610,550)" name="NOT Gate">
-      <a name="facing" val="west"/>
+    <comp lib="0" loc="(630,480)" name="Tunnel">
+      <a name="label" val="rd"/>
     </comp>
   </circuit>
 </project>
