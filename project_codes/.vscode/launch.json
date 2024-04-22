@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug CdM-16 with Von Neumann architecture",
-            "type": "cdm",
-            "request": "launch",
-            "address": "ws://localhost:7001",
-            "architecture": "vonNeumann",
-            "target": "cdm16",
-            "artifacts": {
+        "name": "Debug CdM-16 with Von Neumann architecture",
+        "type": "cdm",
+        "request": "launch",
+        "address": "ws://localhost:7001",
+        "architecture": "vonNeumann",
+        "target": "cdm16",
+        "artifacts": {
                 "image": "${workspaceFolder}/build/out.img",
                 "debug": "${workspaceFolder}/build/out.dbg.json"
             },
             "sources": [
-                "testing.asm"
+                "joystick.asm"
             ]
         }
 
