@@ -32,8 +32,7 @@ main:
         if
             cmp r3, r4
         is gt
-            inc r4
-            sub r3, r4, r3
+            sub r3, 16
         fi
         while
             cmp r3, r6
