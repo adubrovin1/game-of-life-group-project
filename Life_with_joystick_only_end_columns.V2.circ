@@ -2095,8 +2095,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(310,60)" name="Clock">
       <a name="facing" val="south"/>
-      <a name="highDuration" val="50"/>
-      <a name="lowDuration" val="50"/>
+      <a name="highDuration" val="5"/>
+      <a name="lowDuration" val="5"/>
     </comp>
     <comp lib="0" loc="(140,1610)" name="Tunnel">
       <a name="facing" val="east"/>
