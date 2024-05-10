@@ -1647,7 +1647,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp loc="(1500,160)" name="cells_counter"/>
+    <comp loc="(1500,160)" name="cells counter"/>
     <comp lib="0" loc="(1630,1780)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="mem"/>
@@ -2022,7 +2022,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="32"/>
       <a name="label" val="Column 0"/>
     </comp>
-    <comp loc="(1200,480)" name="position_transferring"/>
+    <comp loc="(1200,480)" name="position transferring"/>
     <comp lib="0" loc="(1520,1180)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="change"/>
@@ -2877,7 +2877,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="north"/>
       <a name="label" val="half"/>
     </comp>
-    <comp loc="(1500,360)" name="cells_counter"/>
+    <comp loc="(1500,360)" name="cells counter"/>
     <comp lib="0" loc="(1040,670)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
@@ -3064,8 +3064,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="data"/>
     </comp>
   </circuit>
-  <circuit name="sum_of_neighbours">
-    <a name="circuit" val="sum_of_neighbours"/>
+  <circuit name="sum of neighbours">
+    <a name="circuit" val="sum of neighbours"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -3130,8 +3130,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="inputs" val="8"/>
     </comp>
   </circuit>
-  <circuit name="next_phase_selector">
-    <a name="circuit" val="next_phase_selector"/>
+  <circuit name="next phase selector">
+    <a name="circuit" val="next phase selector"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -3563,7 +3563,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(830,420)" name="Tunnel">
       <a name="label" val="Right middle"/>
     </comp>
-    <comp loc="(890,460)" name="sum_of_neighbours"/>
+    <comp loc="(890,460)" name="sum of neighbours"/>
     <comp lib="0" loc="(1170,200)" name="Pin">
       <a name="facing" val="south"/>
       <a name="width" val="2"/>
@@ -3592,7 +3592,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="trigger" val="falling"/>
       <a name="label" val="Current"/>
     </comp>
-    <comp loc="(950,350)" name="next_phase_selector"/>
+    <comp loc="(950,350)" name="next phase selector"/>
     <comp lib="0" loc="(940,350)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Next"/>
@@ -24804,8 +24804,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="appear" val="center"/>
     </comp>
   </circuit>
-  <circuit name="position_transferring">
-    <a name="circuit" val="position_transferring"/>
+  <circuit name="position transferring">
+    <a name="circuit" val="position transferring"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -27212,7 +27212,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(1590,760)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="2_selecred"/>
+      <a name="label" val="18_selecred"/>
     </comp>
     <comp lib="0" loc="(680,1310)" name="Pin">
       <a name="facing" val="south"/>
@@ -27727,8 +27727,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="north"/>
     </comp>
   </circuit>
-  <circuit name="cells_counter">
-    <a name="circuit" val="cells_counter"/>
+  <circuit name="cells counter">
+    <a name="circuit" val="cells counter"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
