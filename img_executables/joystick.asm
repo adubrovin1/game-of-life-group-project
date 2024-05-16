@@ -28,18 +28,139 @@ main:
         ldw r1, r3
         ldi r4, 15
         ldi r5, 1
-        ldi r6, 0
         if
             cmp r3, r4
         is gt
-            sub r3, 16
+            inc r4
+            sub r3, r4, r3
         fi
-        while
-            cmp r3, r6
-        stays gt
+        ldi r6, 0 # checking 0
+        if 
+            cmp r3, r6 
+        is eq
+            br shifted
+        fi
+        ldi r6, 1 # checking 1
+        if 
+            cmp r3, r6 
+        is eq
             shl r5, r5, 1
-            inc r6
-        wend
+            br shifted
+        fi
+        ldi r6, 2 # checking 2
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 2
+            br shifted
+        fi
+        ldi r6, 3 # checking 3
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 3
+            br shifted
+        fi
+        ldi r6, 4 # checking 4
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 4
+            br shifted
+        fi
+        ldi r6, 5 # checking 5
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 5
+            br shifted
+        fi
+        ldi r6, 6 # checking 6
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 6
+            br shifted
+        fi
+        ldi r6, 7 # checking 7
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 7
+            br shifted
+        fi
+        ldi r6, 8 # checking 8
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            br shifted
+        fi
+        ldi r6, 9 # checking 9
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 1
+            br shifted
+        fi
+        ldi r6, 10 # checking 10
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 2
+            br shifted
+        fi
+        ldi r6, 11 # checking 11
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 3
+            br shifted
+        fi
+        ldi r6, 12 # checking 12
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 4
+            br shifted
+        fi
+        ldi r6, 13 # checking 13
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 5
+            br shifted
+        fi
+        ldi r6, 14 # checking 14
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 6
+            br shifted
+        fi
+        ldi r6, 15 # checking 15
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 7
+            br shifted
+        fi
+        ldi r6, 16 # checking 16
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 8
+            br shifted
+        fi
+        shifted:
         xor r2, r5, r2
         stw r0, r2
         ldi r5, 0xcafe
