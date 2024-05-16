@@ -26,13 +26,19 @@ Birth: A cell becomes alive if it has from two to four neighbors.
 Death: Cells don't survive the next generation.
 
 # User Manual
-These are the steps to run our game:
-Load image file joystick_optimized.img into RAM.
-Enable ticks(Ctrl+K)
-Choose what type of automaton you want to use using the clue on the right.
-Set the Selecting flag to begin marking the initial pattern with a cursor.
-Control the cursor using the buttons, moving it around the field by x and y coordinates. Mark a cell as alive using the "change" button (hold it for 0.5 seconds).
-When you have decided to finish the initial pattern placement, unset the Selecting flag and the program will start the gameplay itself. If you want to pause or clear the field, select the Selecting flag and continue placement. If you press the "Reset" button, the field will be cleared.
+
+## Load image file joystick_optimized.img into RAM.
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/7c117410-eda8-4420-bdde-ddfe4a1c348d)
+
+## Enable ticks(Ctrl+K)
+## Choose what type of automaton you want to use using the clue on the right.
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/2aa54757-ab14-4385-ad07-a5da17e17d01)
+
+## Set the Selecting flag to begin marking the initial pattern with a cursor.
+## Control the cursor using the buttons, moving it around the field by x and y coordinates. Mark a cell as alive using the "change" button (hold it for 0.5 seconds).
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/1312765a-fafe-4ee7-b55b-7be52b9be623)
+
+## When you have decided to finish the initial pattern placement, unset the Selecting flag and the program will start the gameplay itself. If you want to pause or clear the field, select the Selecting flag and continue placement. If you press the "Reset" button, the field will be cleared.
 
 
 # Analogues
@@ -43,10 +49,12 @@ These are features that make our project different from the standard game-to-lif
 Live and dead cell counter implemented through hex digit display
 # Hardware
 Overall we have 10 schemes in our project, you can see their relationship in this scheme:
+![изображение_2024-05-16_191952995](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/5d12da76-9b70-4aff-b6dd-a19ce0283627)
 
 Let's start with the basic, how our cell is organized in general and how it works
 
 ## Sum of neighbors
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/2e72a399-d42a-4b75-b34f-81b6b3223f28)
 
 
 
@@ -71,6 +79,7 @@ Here we have 8 pins that are being summarized by bit adder and the result is inp
 
 
 ## Next phase selector
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/a0ad27e5-f59a-4437-8dc4-ba4989b28d29)
 
 
 ### Inputs:
@@ -97,6 +106,7 @@ Here we have 8 pins that are being summarized by bit adder and the result is inp
 
 
 ## Cell optimized
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/57cea686-f27a-4da3-b1ec-c7ce8c0a8048)
 
 
 
@@ -117,6 +127,7 @@ Here we have 8 pins that are being summarized by bit adder and the result is inp
 
 
 ## Column of 32 cells
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/173880a2-228e-4abf-9121-c0ea10ce80dd)
 
 ### Inputs:
 Initial flags to provide them into cells
@@ -140,6 +151,7 @@ Initial flags to provide them into cells
 
 
  ## 32x32 cells
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/2aff7aff-47be-4ae9-bd16-cf95f0821d43)
 
 
 
@@ -155,6 +167,7 @@ We have 32 32-bit inputs that are initial pattern of all cells and 2 flags, Sele
 There are 32 columns in this part of the circuit. They connect neighboring cells to each other, for a total of 6 neighbors, as two more neighbors are already connected in the circuit of the column itself(top and bottom). Also, the first column has the left side grounded and the 32’nd column has the right side grounded, because in our implementation we consider the cells outside the field to be dead. And there are also 32 32-bit outputs of cell state in the columns. 
 
 ##  main
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/a64c42f0-8ebf-4228-9fe8-a6fba59a17ad)
 
 
 
@@ -164,25 +177,14 @@ There are 32 columns in this part of the circuit. They connect neighboring cells
 
 
 1.
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/c61fc242-5c58-48e2-b93e-4f7f0243a5ca)
 
 
 Overall we have seven flags. Selecting flag is used for marking if user during initial pattern placement phase. Automaton pin defines the cellular automaton to be used for generation. Reset button clears initial pattern data. Also we have four clocks with different duration and because of that, our program is more optimized. Clock_cdm is used by cdm-16 and to update initial pattern registers. Clock_select is used by 32x32 columns while choosing the initial pattern. Clock_life is used while there is an evolution process going	. Clock_show is used to update the cursor position.
 
 
 2. 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/e1f7c44e-b92a-4129-b8a6-9d6636e521b0)
 
 
 
@@ -193,10 +195,12 @@ Here we have 5 buttons, four of which change the cursor position and one is resp
 
 
 
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/d7ef7f4c-c58d-4ff1-a052-20f72a2fb238)
 
 This is what our mechanism for storing and changing coordinates looks like. At the beginning for each coordinate there are two comparators, which determine whether they are within the allowed limits. After that, depending on the signal of the buttons to the coordinates, the values in the registers are replaced by the changed coordinates.
 
 3.
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/6d29981a-50dc-494b-b8e7-7decdb56384c)
 
 
 
@@ -219,6 +223,7 @@ This is what our mechanism for storing and changing coordinates looks like. At t
 There are 3 parts to this scheme. The first one looks at the current cursor position at x coordinate and puts a flag on the corresponding x column. Then the second part receives this flag and sends it to the all_selected tunnel, which is one of the parts of the cursor display system. Part 3 connects the data from the column where the cursor is now and sends it to the column_out tunnel. The tunnel itself is used to change the data during the initial pattern placement.
 
 4.
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/d768cb51-a615-413a-a762-61361364d560)
 
 
 This part of the circuit is responsible for storing the initial location of the pattern. Each register has 5 tunnels connected to it.  changed_column replaces the contents of the register with a new column if the user has changed it in some way. n_selecred is a flag that is needed so that the column is updated only when the cursor is in it. Column n connects to 32x32 cells, passing the initial location of the pattern.
@@ -231,9 +236,11 @@ This part of the circuit is responsible for storing the initial location of the 
 
 
 5.
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/bd047ebb-0a12-4cf0-bf48-e12acb02a66b)
 
 Here we have a 32x32 led display, through 32 32-bit columns inputs goes data with initial placement pattern. From 32 32-bit columns input goes data for correct cursor displaying. y_shift and all_selected can be thought of as coordinates of the cursor. It also provides a mechanism for selecting and connecting the currently needed clock.
 6. 
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/ad0c6d77-f0de-445a-8756-fe55c2852d63)
 
 6.1 Overall we made connection of cdm-16 with RAM as in default Von Neumann configuration.
 6.2 At the top here we have 4 flags, which are given to the processor for correct operation of its calculations. The necessary condition for their application is that the address in RAM matches a certain address, which is written in the Software part. button_needed indicates that the processor needs to apply an input change, i.e. put the living cell in the initial placement of the pattern. y_needed indicates that the processor needs to input the y-coordinate. column_needed indicates that the processor needs to input data from the correct half of the column. push_column is needed to show that the processor is ready to upload the processed data to the output.
@@ -244,6 +251,7 @@ A little lower down we have a mechanism for determining the needed half of the c
 
 
 7.
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/12838b53-234f-4a5b-917c-8fd18ae8e3a6)
 
 ### Inputs:
 32-bit input for column
@@ -260,6 +268,8 @@ A little lower down we have a mechanism for determining the needed half of the c
 
 
 ## Position showing
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/56e1b0f9-d1bf-4a30-97bf-c99286fb9679)
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/77c6b5ce-6a0c-4cca-a7b1-994036cba739)
 
 
 
@@ -273,6 +283,7 @@ Flag, which means is column selected or not
 
 
 ## Position transfering
+![image](https://github.com/adubrovin1/game-of-life-group-project/assets/144322427/34b33220-060d-4ad1-af0c-171f1a5aea7c)
 
 ### Inputs:
 32-bit input for the selected column flag
@@ -290,13 +301,185 @@ Flag, which means is column selected or not
 
 # Software
 
+```asm
+
+# r0 - column address
+# r1 - y shift address
+# r2 - column
+# r3 - y shift
+# r4 - firstly previous state, secondly 16 comparison
+# r5 - firstly button address, secondly shifted res
+# r6 - firstly button condition, secondly shift count
+
+asect 0x00
+
+dc main, 0x00 # сюда прерывания
+
+main:
+    ldi r0, 0xbabe # column
+    ldi r1, 0xbeef # y shift
+    ldi r5, 0xcafe # button adress
+    push r4
+    loop:
+    ldw r5, r6
+    pop r4
+    tst r6
+    push r6
+    bz loop
+    if
+        cmp r6, r4
+    is ne
+        ldw r0, r2
+        ldw r1, r3
+        ldi r4, 15
+        ldi r5, 1
+        if
+            cmp r3, r4
+        is gt
+            inc r4
+            sub r3, r4, r3
+        fi
+        ldi r6, 0 # checking 0
+        if 
+            cmp r3, r6 
+        is eq
+            br shifted
+        fi
+        ldi r6, 1 # checking 1
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 1
+            br shifted
+        fi
+        ldi r6, 2 # checking 2
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 2
+            br shifted
+        fi
+        ldi r6, 3 # checking 3
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 3
+            br shifted
+        fi
+        ldi r6, 4 # checking 4
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 4
+            br shifted
+        fi
+        ldi r6, 5 # checking 5
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 5
+            br shifted
+        fi
+        ldi r6, 6 # checking 6
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 6
+            br shifted
+        fi
+        ldi r6, 7 # checking 7
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 7
+            br shifted
+        fi
+        ldi r6, 8 # checking 8
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            br shifted
+        fi
+        ldi r6, 9 # checking 9
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 1
+            br shifted
+        fi
+        ldi r6, 10 # checking 10
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 2
+            br shifted
+        fi
+        ldi r6, 11 # checking 11
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 3
+            br shifted
+        fi
+        ldi r6, 12 # checking 12
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 4
+            br shifted
+        fi
+        ldi r6, 13 # checking 13
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 5
+            br shifted
+        fi
+        ldi r6, 14 # checking 14
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 6
+            br shifted
+        fi
+        ldi r6, 15 # checking 15
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 7
+            br shifted
+        fi
+        ldi r6, 16 # checking 16
+        if 
+            cmp r3, r6 
+        is eq
+            shl r5, r5, 8
+            shl r5, r5, 8
+            br shifted
+        fi
+        shifted:
+        xor r2, r5, r2
+        stw r0, r2
+        ldi r5, 0xcafe
+        ldi r6, 0
+    fi
+    br loop
+end.
+```
 
 
 
-1. Registers usage in program.
-2. Loading column number, y-shift and current change button state to the certain addresses. Then pushing the first button state to the stack. After that, in the loop loading the current button state and taking the previous button state from the stack. If the button’s state is 0, it is not being pressed, and we should do nothing, so we go to the beginning of the loop.
-3. If button state is not 0, we don’t go straight to the beginning of the loop, because it means that button is being pressed. Firstly, we are comparing previous and current button states, if they are equal we should do nothing, because button is being holded, so we do not go to other code and after end of if-fi construction we go straight to beginning of the loop. Secondly, we are comparing y shift with 16, cause our registers have only 16 bits, so we are splitting our column into 2 parts, and if y shift is bigger than 15, we should decrease it’s coordinates by 16 to have appropriate bit number for register. Then we are checking y shift 16 times to understand what the Oy shift equal is. Then, we go to the shifted subroutine.
-4. There, when we know the Oy shift, we can finally XOR our column with bit word, which has 1 at the y shift position and 0 on the other places, to change a certain cell’s state. After that we go straight to the beginning of the loop.
+Loading column number, y-shift and current change button state to the certain addresses. Then pushing the first button state to the stack. After that, in the loop loading the current button state and taking the previous button state from the stack. If the button’s state is 0, it is not being pressed, and we should do nothing, so we go to the beginning of the loop.
+If button state is not 0, we don’t go straight to the beginning of the loop, because it means that button is being pressed. Firstly, we are comparing previous and current button states, if they are equal we should do nothing, because button is being holded, so we do not go to other code and after end of if-fi construction we go straight to beginning of the loop. Secondly, we are comparing y shift with 16, cause our registers have only 16 bits, so we are splitting our column into 2 parts, and if y shift is bigger than 15, we should decrease it’s coordinates by 16 to have appropriate bit number for register. Then we are checking y shift 16 times to understand what the Oy shift equal is. Then, we go to the shifted subroutine.
+There, when we know the Oy shift, we can finally XOR our column with bit word, which has 1 at the y shift position and 0 on the other places, to change a certain cell’s state. After that we go straight to the beginning of the loop.
 
 
 # Interaction between Hardware and Software
